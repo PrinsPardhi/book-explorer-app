@@ -1,2 +1,247 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+/* Ionic Variables and Theming */
+:root {
+  /* Primary color palette (book-inspired) */
+  --ion-color-primary: #5d4037; /* Rich brown */
+  --ion-color-primary-rgb: 93, 64, 55;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #523831;
+  --ion-color-primary-tint: #6d534b;
+
+  /* Secondary color (accent) */
+  --ion-color-secondary: #8d6e63; /* Lighter brown */
+  --ion-color-secondary-rgb: 141, 110, 99;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #7c6157;
+  --ion-color-secondary-tint: #987d73;
+
+  /* Tertiary color (highlight) */
+  --ion-color-tertiary: #d7ccc8; /* Light parchment */
+  --ion-color-tertiary-rgb: 215, 204, 200;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #bdb4b0;
+  --ion-color-tertiary-tint: #dbd1ce;
+
+  /* Success color */
+  --ion-color-success: #2e7d32; /* Forest green */
+  --ion-color-success-rgb: 46, 125, 50;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #286e2b;
+  --ion-color-success-tint: #438a47;
+
+  /* Warning color */
+  --ion-color-warning: #ff8f00; /* Amber */
+  --ion-color-warning-rgb: 255, 143, 0;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #e07e00;
+  --ion-color-warning-tint: #ff9a1a;
+
+  /* Danger color */
+  --ion-color-danger: #c62828; /* Deep red */
+  --ion-color-danger-rgb: 198, 40, 40;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ae2323;
+  --ion-color-danger-tint: #cc3e3e;
+
+  /* Dark color */
+  --ion-color-dark: #2c2c2c; /* Almost black */
+  --ion-color-dark-rgb: 44, 44, 44;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #272727;
+  --ion-color-dark-tint: #414141;
+
+  /* Medium color */
+  --ion-color-medium: #757575; /* Gray */
+  --ion-color-medium-rgb: 117, 117, 117;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #676767;
+  --ion-color-medium-tint: #838383;
+
+  /* Light color */
+  --ion-color-light: #f5f5f5; /* Off-white */
+  --ion-color-light-rgb: 245, 245, 245;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d8d8d8;
+  --ion-color-light-tint: #f6f6f6;
+
+  /* Font settings */
+  --ion-font-family: 'Merriweather', 'Roboto', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --ion-headings-font-weight: 500;
+  --ion-text-color: #333333;
+  --ion-background-color: #f9f6f2; /* Parchment-like background */
+}
+
+/* Typography */
+ion-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+ion-card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--ion-color-primary);
+}
+
+/* Card styling */
+ion-card {
+  --background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Book cover styling */
+.book-cover {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Button styling */
+ion-button {
+  --border-radius: 8px;
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.2s ease;
+
+  &:hover {
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* List item styling */
+ion-item {
+  --border-radius: 8px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --inner-padding-end: 12px;
+  margin-bottom: 8px;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    --background: var(--ion-color-tertiary);
+  }
+}
+
+/* Login page specific */
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background: url('/assets/images/texture-paper.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .book-detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+
+  .book-cover {
+    max-width: 350px;
+  }
+
+  .login-container {
+    padding-top: 100px;
+  }
+}
+
+/* Animation for page transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ion-router-outlet > * {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ion-color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ion-color-primary);
+  border-radius: 4px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.ion-text-wrap {
+  white-space: normal;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+/* Rating stars */
+.rating-stars {
+  ion-icon {
+    color: var(--ion-color-warning);
+    margin-right: 2px;
+  }
+}
+
+/* Genre tags */
+.genre-tag {
+  display: inline-block;
+  background: var(--ion-color-tertiary);
+  color: var(--ion-color-primary);
+  padding: 4px 8px;
+  border-radius: 16px;
+  font-size: 12px;
+  margin-right: 6px;
+  margin-bottom: 6px;
+}
+
+/* Prevents layout shifting when errors appear */
+.form-container {
+  min-height: 300px; /* Adjust based on your form size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

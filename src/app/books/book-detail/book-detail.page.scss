@@ -1,0 +1,135 @@
+/* Layout */
+.book-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Book Card */
+.book-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover-container {
+  text-align: center;
+  background: #f5f5f5;
+  padding: 16px;
+  
+  .book-cover {
+    max-height: 300px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.book-header {
+  padding-bottom: 0;
+  
+  .book-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .book-author {
+    font-size: 1rem;
+    color: var(--ion-color-medium);
+    margin-bottom: 16px;
+  }
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0;
+  
+  ion-button {
+    flex: 1;
+    --border-radius: 8px;
+    height: 40px;
+    margin: 0;
+    
+    ion-icon {
+      font-size: 18px;
+    }
+  }
+}
+
+/* Meta Information */
+.meta-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-medium);
+    
+    ion-icon {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+    
+    .rating-value {
+      margin-left: 6px;
+      font-size: 14px;
+      color: var(--ion-color-dark);
+    }
+  }
+}
+
+/* Genre Chips */
+.genre-section {
+  margin: 20px 0;
+  
+  ion-chip {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Sections */
+.description-section, .additional-info {
+  margin-top: 24px;
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--ion-color-dark);
+    position: relative;
+    padding-bottom: 8px;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--ion-color-primary);
+      border-radius: 3px;
+    }
+  }
+  
+  .description-text {
+    line-height: 1.6;
+    color: var(--ion-color-dark);
+    white-space: pre-line;
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .book-cover-container .book-cover {
+    max-height: 400px;
+  }
+  
+  .book-header .book-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/books"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Book Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" fill="clear">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-loading *ngIf="isLoading"></app-loading>
+
+  <div class="book-detail-container" *ngIf="book">
+    <ion-card class="book-card">
+      <ion-card-header>
+        <ion-card-title class="book-title">{{ book.title }}</ion-card-title>
+        <ion-card-subtitle class="book-author">{{ book.author }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" size-md="4" *ngIf="book.coverImage">
+              <div class="book-cover-container">
+                <img [src]="book.coverImage" [alt]="book.title" class="book-cover">
+              </div>
+            </ion-col>
+            <ion-col size="12" size-md="8">
+              <div class="book-meta">
+                <p><strong>Published:</strong> {{ book.publishedDate | date:'mediumDate' }}</p>
+                <p *ngIf="book.pageCount"><strong>Pages:</strong> {{ book.pageCount }}</p>
+                <p *ngIf="book.averageRating"><strong>Rating:</strong>
+                  <span class="rating-stars">
+                    <ion-icon *ngFor="let star of [1,2,3,4,5]"
+                      [name]="star <= book.averageRating! ? 'star' : 'star-outline'" color="warning"></ion-icon>
+                    <span class="rating-value">({{ book.averageRating | number:'1.1-1' }})</span>
+                  </span>
+                </p>
+                <p *ngIf="book.genre"><strong>Genre:</strong>
+                  <span *ngFor="let genre of book.genre" class="genre-tag">{{genre}}</span>
+                </p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <div class="book-description ion-margin-top">
+          <h3>Description</h3>
+          <p class="description-text">{{ book.longDescription }}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
