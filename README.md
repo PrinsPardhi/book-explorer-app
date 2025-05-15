@@ -14,9 +14,9 @@
 ## Screenshots  
 | Login Page | Book List | Book Details |  
 |------------|-----------|--------------|  
-| <img src="src/assets/screenshots/login.png" width="200"> |
-| <img src="src/assets/screenshots/list.png" width="200"> |
-| <img src="src/assets/screenshots/details.png" width="200"> |
+| <img src="src/assets/screenshots/login.png" width="200"> || <img src="src/assets/screenshots/list.png" width="200"> || <img src="src/assets/screenshots/details.png" width="200"> |
+
+
 
 ## How to Run  
 ```bash
