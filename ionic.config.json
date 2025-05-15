@@ -1,0 +1,7 @@
+{
+  "name": "book-explorer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
