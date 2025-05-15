@@ -7,7 +7,9 @@
 ✅ Searchable book list  
 ✅ Book details with ratings/genres  
 ✅ Responsive mobile/desktop UI  
-✅ Ionic Storage for session persistence  
+✅ Ionic Storage for session persistence 
+
+## Test Credentials: user / pass123 
 
 ## Screenshots  
 | Login Page | Book List | Book Details |  
@@ -20,14 +22,4 @@ npm install
 ionic serve
 
 
-Test Credentials: user / pass123 
-
-Technical Stack
-Ionic 7 + Angular 19 (Standalone)
-
-TypeScript
-
-Ionic Storage
-
-Capacitor (for future mobile builds)
 
